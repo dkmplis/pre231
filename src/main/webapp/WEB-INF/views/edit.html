@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/edit}" th:object="${user}">
+    <input type="hidden" name="id" th:value="${user.getId()}"/>
+    <label for="fullName">Enter new name:</label>
+    <input type="text" th:field="*{fullName}" id="fullName"/>
+    <br>
+    <label for="date">Enter new date of birth(dd/mm/yyyy):</label>
+    <input type="text" th:field="*{dateOfBirth}" id="date"/>
+    <br>
+    <label for="fullName">Enter new country:</label>
+    <input type="text" th:field="*{country}" id="country"/>
+    <br>
+    <input type="submit" value="Add"/>
+</form>
+</body>
+</html>
