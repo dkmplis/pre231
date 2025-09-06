@@ -1,9 +1,9 @@
-package ru.pre.config.services;
+package ru.pre.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.pre.config.repositories.UserRep;
+import ru.pre.repositories.UserRep;
 import ru.pre.model.User;
 
 import java.util.List;

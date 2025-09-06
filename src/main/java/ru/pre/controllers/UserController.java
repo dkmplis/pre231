@@ -1,4 +1,4 @@
-package ru.pre.config.controllers;
+package ru.pre.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import ru.pre.config.services.UserServ;
+import ru.pre.services.UserServ;
 import ru.pre.model.User;
 
 @Controller

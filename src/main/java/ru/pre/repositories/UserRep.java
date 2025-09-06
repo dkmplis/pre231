@@ -1,4 +1,4 @@
-package ru.pre.config.repositories;
+package ru.pre.repositories;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,10 +14,12 @@ public class UserRep {
 
     @PersistenceContext
     private EntityManager entityManager;
+
     @Transactional(readOnly = true)
     public List<User> getAllUser() {
         return entityManager.createQuery("FROM User", User.class).getResultList();
     }
+
     @Transactional(readOnly = true)
     public User getUserById(int id) {
         return entityManager.find(User.class, id);
