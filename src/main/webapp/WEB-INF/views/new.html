@@ -8,12 +8,15 @@
 <form th:method="POST" th:action="@{/new}" th:object="${user}">
     <label for="fullName">Enter full name:</label>
     <input type="text" th:field="*{fullName}" id="fullName"/>
+    <div style="color:red" th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}">error</div>
     <br>
     <label for="date">Enter date of birth(dd/mm/yyyy):</label>
     <input type="text" th:field="*{dateOfBirth}" id="date"/>
+    <div style="color:red" th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}">error</div>
     <br>
-    <label for="fullName">Enter country:</label>
+    <label for="country">Enter country:</label>
     <input type="text" th:field="*{country}" id="country"/>
+    <div style="color:red" th:if="${#fields.hasErrors('country')}" th:errors="*{country}">error</div>
     <br>
     <input type="submit" value="Add"/>
 </form>
